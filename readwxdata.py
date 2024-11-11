@@ -6,3 +6,8 @@ with open('csv/'+'2024-11-07.csv') as f:
         wx1 = s.wSetGet(w[0],w[1],w[2],w[3],w[4],w[5],w[6],w[7],w[8],w[9],w[10],w[11])
 
 print(wx1.getTime(1))
+
+max_value = wx1.getOutTemp(100)
+
+ 
+print(max_value)  # Output: 9
