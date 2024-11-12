@@ -50,4 +50,4 @@ class wSetGet:
     def getStrikeFreq(self):
             return _StrikeFreq[i] 
     def getLen(self):
-            return len(self.outTemp)
+            return len(self._OutTemp)
