@@ -2,6 +2,7 @@ class wSetGet:
     _CDate = []
     _CTime = []
     _OutTemp = []
+    _HighTempIndex = 0
     _Dew = []
     _Hum = []
     _RainRate = []
@@ -30,27 +31,31 @@ class wSetGet:
             return self._CTime[i]
     def getOutTemp(self,i):
             return self._OutTemp[i]
+    def getHighTempIndex(self):
+           return self._HighTempIndex
     def getDew(self,i):
             return self._Dew[i]
-    def getHum(self):
+    def getHum(self, i):
             return self._Hum[i]
-    def getRainRate(self):
+    def getRainRate(self,i):
             return self._RainRate[i]
-    def getTodayRain(self):
+    def getTodayRain(self,i):
             return _TodayRain[i]
-    def getWindDir(self):
+    def getWindDir(self,i):
             return self._WindDir[i]
-    def getWindSpeed(self):
+    def getWindSpeed(self,i):
             return self._WindSpeed[i]
-    def getSLP(self): 
+    def getSLP(self,i): 
             return _SLP[i]
-    def getStrikeToday(self):
+    def getStrikeToday(self,i):
             return _StrikeToday[i]
-    def getStrikeDest(self):
+    def getStrikeDest(self,i):
             return _StrikeDist[i]
-    def getStrikeFreq(self):
+    def getStrikeFreq(self,i):
             return _StrikeFreq[i] 
     def getLen(self):
             return len(self._OutTemp)
-    def setIndex(i):
-           return i
+    def setHighTempIndex(self, i):
+           self._HighTempIndex = i
+    def setLowTempIndex(self, i):
+           self._LowTempIndex

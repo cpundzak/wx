@@ -35,7 +35,11 @@ def getMax(wx1):
 def getMin(wx1):
     a = []
     for x in range(0,wx1.getLen()):
-        s.wSetGet.setIndex(x)
         a.append(wx1.getOutTemp(x))
     return min(a)
 
+def getMaxIndex(wx1):
+    a = []
+    for x in range(0,wx1.getLen()):
+        a.append(wx1.getOutTemp(x))
+    return a.index(str(max(a)))
