@@ -11,7 +11,11 @@ def load(d,st):
             ctime = t [1]
             v = s.wSetGet(cdate,ctime,w[1],w[2],w[3],w[4],w[5],w[6],w[7],w[8],w[9],w[10],w[11])
     return v
-
+def loadTodayRain(wx1):
+    a = 0
+    for x in range(0,wx1.getLen()):
+        a = a + wx1.getTodayRain(x)
+    return a
 
 def autoLoad(st):
     os.chdir("csv")
@@ -22,21 +26,20 @@ def autoLoad(st):
     return None
 
 def fil(a):
-    w = a[1:]
-    t = w 
-    return t
+    r = a.split(",")
+    return r[0]
 
 def getMax(wx1):
     a = []
     for x in range(0,wx1.getLen()):
         a.append(wx1.getOutTemp(x))
-    return max(a)
+    return fil(max(a))
 
 def getMin(wx1):
     a = []
     for x in range(0,wx1.getLen()):
         a.append(wx1.getOutTemp(x))
-    return min(a)
+    return fil(min(a))
 
 def getMaxIndex(wx1):
     a = []

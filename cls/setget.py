@@ -40,7 +40,7 @@ class wSetGet:
     def getRainRate(self,i):
             return self._RainRate[i]
     def getTodayRain(self,i):
-            return _TodayRain[i]
+            return self._TodayRain[i]
     def getWindDir(self,i):
             return self._WindDir[i]
     def getWindSpeed(self,i):
