@@ -47,8 +47,6 @@ Results are as follows
 
 Stake Dinner 
 
-put lines 7 & 8
-
-into deff.py
-
+put lines 7 & 8 nto deff.py
+https://tempestwx.com/history/83172/day/2024/10/30
 '''
