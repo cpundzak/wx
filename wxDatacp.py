@@ -1,17 +1,14 @@
-from cls import deff as d
-from cls import setget as s
 from cls import deff_Cp as c
-w = c.load("2024-10-30",100)
+w = c.load("2024-10-30",1)
 print(c.getMax(w))
 print(c.getMin(w))
 w.setHighTempIndex(c.getMaxIndex(w))
 print(w.getTime(w.getHighTempIndex()))
 
 
-temp = ""
 for x in range(0,w.getLen()):
-    temp = w.getTodayRain(x)
-    r = temp.split(",")
+    w.setTemp(w.getTodayRain(x))
+    r = w.getTemp().split(",")
     w.setA(r[0])
 d = max(w.getA())
 
