@@ -1,41 +1,41 @@
 from cls import deff as d
 from cls import setget as s
 from cls import deff_Cp as c
-w = d.load("2024-10-30",100)
-print(d.getMax(w))
-print(d.getMin(w))
-w.setHighTempIndex(d.getMaxIndex(w))
+w = c.load("2024-10-30",100)
+print(c.getMax(w))
+print(c.getMin(w))
+w.setHighTempIndex(c.getMaxIndex(w))
 print(w.getTime(w.getHighTempIndex()))
 
-a = []
+
 temp = ""
 for x in range(0,w.getLen()):
     temp = w.getTodayRain(x)
     r = temp.split(",")
-    a.append(r[0])
-d = max(a)
+    w.setA(r[0])
+d = max(w.getA())
 
-r = ""
+
 if(len(d) > 0):
-    r = d[0:4]
-print(r)
+    w.setRain(d[0:4])
+print(w.getRain())
 
-a = []
+w.resetA()
 temp = ""
 for x in range(0,w.getLen()):
     temp = w.getHum(x)
     r = temp.split(",")
-    a.append(r[0])
-d = max(a)
+    w.setA(r[0])
+d = max(w.getA())
 
 b = []
 if(len(d) > 0):
     print(d[0:4])
 
 for x in range(0,w.getLen()):
-    if(a[x] != "100.0"):
-        if(a[x] != str(d)):
-            b.append(a[x])
+    if(w.getPerciseA(x)!= "100.0"):
+        if(w.getPerciseA(x) != str(d)):
+            b.append(w.getPerciseA(x))
 c = min(b)
 print(c)
 

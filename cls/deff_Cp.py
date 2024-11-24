@@ -46,3 +46,6 @@ def getMaxIndex(wx1):
     for x in range(0,wx1.getLen()):
         a.append(wx1.getOutTemp(x))
     return a.index(str(max(a)))
+
+
+    

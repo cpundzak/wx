@@ -13,6 +13,8 @@ class wSetGet:
     _StrikeToday = []
     _StrikeDist = []
     _StrikeFreq = []
+    _A = []
+    _Rain = ""
     def __init__(self,cdate,ctime,outTemp,dewPoint,humidity,rainRate,todayRain,windDir,windSpd,SLP,strikeToday,strikeDist,strikeFreq):
        self._CDate.append(cdate)
        self._CTime.append(ctime)
@@ -55,7 +57,19 @@ class wSetGet:
             return _StrikeFreq[i] 
     def getLen(self):
             return len(self._OutTemp)
+    def setRain(self, i):
+           self._Rain
+    def getRain(self):
+           return self._Rain
     def setHighTempIndex(self, i):
            self._HighTempIndex = i
     def setLowTempIndex(self, i):
            self._LowTempIndex
+    def setA(self, i):
+           self._A.append(i)
+    def getA(self):
+            return self._A
+    def getPerciseA(self, i):
+           return self._A[i]
+    def resetA(self):
+           self._A = []
