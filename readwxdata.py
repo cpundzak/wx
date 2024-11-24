@@ -1,7 +1,7 @@
 from cls import deff as d
 from cls import setget as s
 from cls import deff_Cp as c
-w = d.load("2024-10-30",100)
+w = d.load("2024-10-30")
 print(d.getMax(w))
 print(d.getMin(w))
 w.setHighTempIndex(d.getMaxIndex(w))

@@ -1,5 +1,5 @@
 from cls import deff_Cp as c
-w = c.load("2024-10-30",1)
+w = c.load("2024-10-30")
 print(c.getMax(w))
 print(c.getMin(w))
 w.setHighTempIndex(c.getMaxIndex(w))

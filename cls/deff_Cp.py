@@ -1,7 +1,7 @@
 import glob
 import os
 from cls import setget as s 
-def load(d,smin):
+def load(d):
     masterAr = []
     with open('csv/'+d+'.csv') as f:
         for line in f:
