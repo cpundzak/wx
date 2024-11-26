@@ -20,6 +20,26 @@ def loadTodayRain(wx1):
     for x in range(0,wx1.getLen()):
         a = a + wx1.getTodayRain(x)
     return a
+def todaysRain(w):
+    t = []
+    for x in range(0,w.getLen()):
+        tr = w.getTodayRain(x)
+        t.append(tr)
+    s = list((set(t)))
+    tr = s
+    r = str(tr).split(",")
+    tr = r[0]
+    tr = tr[2:]
+    print(format(float(tr), '.2f'))
+def todaysHumidty(w):
+    w.resetA()
+    temp = ""
+    for x in range(0,w.getLen()):
+        temp = w.getHum(x)
+        r = temp.split(",")
+        w.setA(r[0])
+    d = max(w.getA())
+    print(format(float(d), '.1f'))
 
 def autoLoad(st):
     os.chdir("csv")

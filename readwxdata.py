@@ -41,10 +41,10 @@ print(c)
 
 '''homework, put line(s) 10 - 37 into deff.py def #1 return r def #2 return d def # 2 return  c  def # 2 needs array a as argument
 Results are as follows
-1.25 for rain
-99.0 max hum
-67.0 min hum
-
+48.4
+45.5
+0.09
+96.0
 Stake Dinner 
 
 put lines 7 & 8 nto deff.py

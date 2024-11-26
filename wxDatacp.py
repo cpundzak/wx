@@ -4,27 +4,11 @@ w = c.load("2024-11-10",1)
 print(c.getMax(w))
 print(c.getMin(w))
 
-t = []
-for x in range(0,w.getLen()):
-    tr = w.getTodayRain(x)
-    t.append(tr)
-s = list((set(t)))
-tr = s
-r = str(tr).split(",")
-tr = r[0]
-tr = tr[2:]
-print(format(float(tr), '.2f'))
+c.todaysRain(w)
+
+c.todaysHumidty(w)
 
 
-
-w.resetA()
-temp = ""
-for x in range(0,w.getLen()):
-    temp = w.getHum(x)
-    r = temp.split(",")
-    w.setA(r[0])
-d = max(w.getA())
-print(format(float(d), '.1f'))
 
 
 
@@ -39,11 +23,7 @@ for x in range(0,w.getLen()):
 c = min(b)
 print(c)
 
-homework, put line(s) 10 - 37 into deff.py def #1 return r def #2 return d def # 2 return  c  def # 2 needs array a as argument
-Results are as follows
-1.25 for rain
-99.0 max hum
-67.0 min hum
+
 
 Stake Dinner 
 
