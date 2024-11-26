@@ -1,21 +1,21 @@
 from cls import deff_Cp as c
-w = c.load("2024-10-30")
+
+w = c.load("2024-11-10",1)
 print(c.getMax(w))
 print(c.getMin(w))
-w.setHighTempIndex(c.getMaxIndex(w))
-print(w.getTime(w.getHighTempIndex()))
 
-
+t = []
 for x in range(0,w.getLen()):
-    w.setTemp(w.getTodayRain(x))
-    r = w.getTemp().split(",")
-    w.setA(r[0])
-d = max(w.getA())
+    tr = w.getTodayRain(x)
+    t.append(tr)
+s = list((set(t)))
+tr = s
+r = str(tr).split(",")
+tr = r[0]
+tr = tr[2:]
+print(format(float(tr), '.2f'))
 
 
-if(len(d) > 0):
-    w.setRain(d[0:4])
-print(w.getRain())
 
 w.resetA()
 temp = ""
@@ -24,11 +24,14 @@ for x in range(0,w.getLen()):
     r = temp.split(",")
     w.setA(r[0])
 d = max(w.getA())
+print(format(float(d), '.1f'))
 
-b = []
-if(len(d) > 0):
-    print(d[0:4])
 
+
+
+
+
+'''
 for x in range(0,w.getLen()):
     if(w.getPerciseA(x)!= "100.0"):
         if(w.getPerciseA(x) != str(d)):
@@ -36,7 +39,7 @@ for x in range(0,w.getLen()):
 c = min(b)
 print(c)
 
-'''homework, put line(s) 10 - 37 into deff.py def #1 return r def #2 return d def # 2 return  c  def # 2 needs array a as argument
+homework, put line(s) 10 - 37 into deff.py def #1 return r def #2 return d def # 2 return  c  def # 2 needs array a as argument
 Results are as follows
 1.25 for rain
 99.0 max hum
